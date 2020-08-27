@@ -2,12 +2,12 @@
 
 ### 1.1 Getting started
 
-[Answer](./im/started.png)
+![Answer](./im/started.PNG)
 
 ### 1.2 Cleanup
 
-[Answer](./im/started2.png)
+![Answer](./im/started2.PNG)
 
 ### 1.3 Hello Docker Hub
 
-[Answer](./im/secret.png)
+![Answer](./im/secret.PNG)
