@@ -11,3 +11,7 @@
 ### 1.3 Hello Docker Hub
 
 ![Answer](./im/secret.PNG)
+
+### 1.4
+
+![Answer](./im/four.png)
