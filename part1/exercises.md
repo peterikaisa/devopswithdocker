@@ -14,4 +14,24 @@
 
 ### 1.4
 
-![Answer](./im/four.png)
+![Answer](./im/four.PNG)
+
+### 1.5
+
+The easiest, simplest method that I came up with
+
+```
+docker run -it -d --name ubuntu ubuntu:16.04 // let's run an ubuntu image in a (detached) container
+docker exec -it ubuntu sh // invade that juicy container with shell
+```
+Once connected to the shell: (following magic happens inside the container)
+
+```
+(# apt update // optional, I guess, if the next one works ok, I don't really know unix systems that well, man)
+# (sudo) apt install curl
+(# curl helsinki.fi // for testing, if unsure like I am)
+# exit // get out
+```
+And now we have a container running ubuntu with curl installed and can run the given shell script
+
+![Answer](./im/five.PNG)
