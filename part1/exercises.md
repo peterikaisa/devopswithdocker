@@ -35,3 +35,9 @@ Once connected to the shell: (following magic happens inside the container)
 And now we have a container running ubuntu with curl installed and can run the given shell script
 
 ![Answer](./im/five.PNG)
+
+### 1.6
+
+[Dockerfile](./Dockerfiles/six/Dockerfile.1)
+
+![Answer](./im/six.PNG)
