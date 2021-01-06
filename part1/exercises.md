@@ -51,3 +51,9 @@ And now we have a container running ubuntu with curl installed and can run the g
 ### 1.8
 
 ![Answer](./im/eight.PNG)
+
+### 1.9
+
+![Answer](./im/nine.PNG)
+
+![Answer](./im/nine2.PNG)
