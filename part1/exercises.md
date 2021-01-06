@@ -47,3 +47,7 @@ And now we have a container running ubuntu with curl installed and can run the g
 [Dockerfile](./Dockerfiles/seven/Dockerfile)
 
 ![Answer](./im/seven.PNG)
+
+### 1.8
+
+![Answer](./im/eight.PNG)
