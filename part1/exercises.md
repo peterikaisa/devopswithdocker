@@ -70,3 +70,10 @@ This is basically the same way as used in 1.9 because the exercise was a bit amb
 
 ![Answer](./im/eleven.PNG)
 ![Answer](./im/eleven2.PNG)
+
+### 1.12
+
+[Front](./Dockerfiles/frontend-example-docker-master/Dockerfile)
+![Answer](./im/twelvefront.PNG)
+[Back](./Dockerfiles/backend-example-docker-master/Dockerfile)
+![Answer](./im/twelveback.PNG)

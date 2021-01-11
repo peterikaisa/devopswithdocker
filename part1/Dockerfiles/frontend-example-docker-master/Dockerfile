@@ -1,5 +1,6 @@
 FROM ubuntu:16.04
 EXPOSE 5000
+ENV API_URL="http://localhost:8000"
 
 WORKDIR /usr/app
 COPY . .
