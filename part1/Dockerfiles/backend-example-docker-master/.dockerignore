@@ -1,0 +1,3 @@
+# these will be there after running npm scripts
+/node_modules
+/dist
