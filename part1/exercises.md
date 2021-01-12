@@ -82,3 +82,14 @@ This is basically the same way as used in 1.9 because the exercise was a bit amb
 
 [Dockerfile](./Dockerfiles/spring-example-project-master/Dockerfile)
 ![Answer](./im/13.PNG)
+
+### 1.14
+
+[Dockerfile](./Dockerfiles/rails-example-project-master/Dockerfile)
+
+```
+Running it with
+$ docker run -it -p 3000:3000 <image>
+```
+
+![Answer](./im/14.PNG)
