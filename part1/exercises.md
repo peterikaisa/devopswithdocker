@@ -77,3 +77,8 @@ This is basically the same way as used in 1.9 because the exercise was a bit amb
 ![Answer](./im/twelvefront.PNG)
 [Back](./Dockerfiles/backend-example-docker-master/Dockerfile)
 ![Answer](./im/twelveback.PNG)
+
+### 1.13
+
+[Dockerfile](./Dockerfiles/spring-example-project-master/Dockerfile)
+![Answer](./im/13.PNG)
