@@ -97,3 +97,25 @@ $ docker run -it -p 3000:3000 <image>
 ### 1.16
 
 https://docker-example-k.herokuapp.com/
+
+### 1.17
+
+
+[Source](./Dockerfiles/seventeen)
+
+Since .NET environments are usually project dependent and don't include that many different tools aside from an editor, this docker image will be creating one as well as copying another from source.
+
+This project uses the [.NET](https://hub.docker.com/_/microsoft-dotnet-sdk/) base image to create a dev environment and then creates a new default console app into `/usr/app/source` that can be run with `dotnet run`. It then copies a test file from source to `/usr/app/tests` and adds a couple dependencies. The tests can be run with `dotnet test`. The final image can be found at https://hub.docker.com/r/peterikaisa/hy-docker.
+
+```Dockerfile
+FROM mcr.microsoft.com/dotnet/sdk:3.1
+WORKDIR /usr/app/source
+RUN dotnet new console
+
+WORKDIR /usr/app/tests
+COPY tests/ .
+RUN dotnet add package xunit --version 2.4.1
+RUN dotnet add package xunit.runner.visualstudio --version 2.4.1
+
+CMD [ "bin/bash" ]
+```
