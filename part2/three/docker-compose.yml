@@ -1,0 +1,17 @@
+version: '3'
+
+services: 
+  backend:
+    image: backend
+    ports: 
+      - 8000:8000
+    volumes: 
+      - type: bind
+        source: ./logs.txt
+        target: /usr/app/logs.txt
+    container_name: backend
+  frontend:
+    image: front
+    ports: 
+      - 5000:5000
+    container_name: frontend
