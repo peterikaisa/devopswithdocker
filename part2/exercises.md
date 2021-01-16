@@ -39,3 +39,7 @@ Substitute the image sources with your own.
 ### 2.8
 
 [Compose](./eight/docker-compose.yml)
+
+### 2.9
+
+[Compose](./nine/docker-compose.yml)
