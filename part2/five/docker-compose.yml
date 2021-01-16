@@ -1,0 +1,25 @@
+version: '3.5'
+
+services: 
+  backend:
+    image: backend
+    environment: 
+      - REDIS=redis
+      - REDIS_PORT=6379
+    ports: 
+      - 8000:8000
+    volumes: 
+      - type: bind
+        source: ./logs.txt
+        target: /usr/app/logs.txt
+    container_name: backend
+  frontend:
+    image: front
+    ports: 
+      - 5000:5000
+    container_name: frontend
+  redis:
+    image: redis
+    ports: 
+      - 6379:6379
+    container_name: redis
