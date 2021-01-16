@@ -29,3 +29,9 @@ Substitute the image sources with your own.
 ### 2.6
 
 [Compose](./six/docker-compose.yml)
+
+### 2.7
+
+[Compose](./seven/docker-compose.yml)
+
+![Kurkut](./seven/kurkut.PNG)
