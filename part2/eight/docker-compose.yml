@@ -1,0 +1,44 @@
+version: '3.5'
+
+services: 
+  nginx:
+    image: nginx
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    ports: 
+      - 8080:80
+    depends_on:
+      - backend
+      - frontend
+  backend:
+    image: backend
+    environment: 
+      - REDIS=redis
+      - REDIS_PORT=6379
+      - DB_USERNAME=testuser
+      - DB_PASSWORD=testpassw
+      - DB_HOST=db
+    volumes: 
+      - type: bind
+        source: ./logs.txt
+        target: /usr/app/logs.txt
+    depends_on: 
+      - db
+    container_name: backend
+  frontend:
+    image: front
+    container_name: frontend
+  redis:
+    image: redis
+    container_name: redis
+  db:
+    image: postgres
+    environment: 
+      - POSTGRES_USER=testuser
+      - POSTGRES_PASSWORD=testpassw
+    volumes: 
+      - database:/var/lib/postgresql/data
+    container_name: db
+
+volumes: 
+  database:
