@@ -25,3 +25,7 @@ $ docker-compose up -d --scale compute=3
 Substitute the image sources with your own.
 
 [Compose](./five/docker-compose.yml)
+
+### 2.6
+
+[Compose](./six/docker-compose.yml)
