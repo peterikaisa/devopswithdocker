@@ -140,3 +140,48 @@ Image sizes are as in 3.1 (after 3.1 changes). To maintain some consistency betw
 Once again, I made a new dockerfile called `Dockerfile.multi` for clarity.
 
 [Dockerfile](..\part1\Dockerfiles\frontend-example-docker-master\Dockerfile.multi)
+
+### 3.7
+
+I modified the dockerfile in the rails project provided by this course. Original [dockerfile](..\part1\Dockerfiles\rails-example-project-master\Dockerfile) located in part 1.
+
+```Dockerfile
+FROM ruby:2.6.0
+
+RUN apt-get update && apt-get install -y curl
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash
+RUN apt-get install -y nodejs
+
+COPY Gemfile Gemfile.lock ./
+RUN bundle install
+COPY . .
+RUN rails db:migrate
+CMD [ "rails", "s" ]
+```
+
+Added changes include mostly removing separate layers from different RUN commands, removing curl afterwards and adding a non-root user. I tried making the app run in production mode, but I kept getting a 'missing secret_key_base' error and I don't now ruby at all nor do I know how it builds its assets for production, so it is what it is. There really wasn't any change in the image size * shrug *.
+
+[Dockerfile](..\part1\Dockerfiles\rails-example-project-master\Dockerfile.opt)
+
+```Dockerfile
+FROM ruby:2.6.0
+
+WORKDIR /app
+
+COPY . .
+
+RUN apt-get update && \
+    apt-get install -y curl && \
+    curl -sL https://deb.nodesource.com/setup_14.x | bash && \
+    apt-get install -y nodejs && \
+    apt-get purge -y --auto-remove curl && \
+    bundle install && \
+    rails db:migrate && \
+    rake assets:precompile && \
+    useradd -m ruby && \
+    chown -R ruby .
+
+USER ruby
+
+CMD [ "rails", "s" ]
+```
