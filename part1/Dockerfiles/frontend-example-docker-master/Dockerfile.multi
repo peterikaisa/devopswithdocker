@@ -1,0 +1,15 @@
+FROM node:lts as build
+WORKDIR /app
+COPY . .
+RUN npm install && \
+    npm run build
+
+FROM node:lts-slim as app
+WORKDIR /app
+RUN npm install -g serve && \
+    chown -R node .
+COPY --from=build /app/dist /app
+USER node
+ENV API_URL="http://localhost:8000"
+EXPOSE 5000
+CMD [ "sh", "-c", "serve -s -l 5000" ]

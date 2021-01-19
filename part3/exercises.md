@@ -134,3 +134,9 @@ Image sizes are as in 3.1 (after 3.1 changes). To maintain some consistency betw
 ![Smol front](./five/frontsmol.PNG)
 
 ![Front diff](./five/frontdiff.PNG)
+
+### 3.6
+
+Once again, I made a new dockerfile called `Dockerfile.multi` for clarity.
+
+[Dockerfile](..\part1\Dockerfiles\frontend-example-docker-master\Dockerfile.multi)
