@@ -1,0 +1,14 @@
+FROM node:lts-slim
+
+WORKDIR /usr/app
+COPY . .
+
+RUN npm install && \
+    rm -rf /var/lib/apt/lists/* && \
+    chown -R node .
+
+USER node
+
+ENV API_URL="http://localhost:8000"
+EXPOSE 5000
+CMD [ "sh", "-c", "npm start" ]

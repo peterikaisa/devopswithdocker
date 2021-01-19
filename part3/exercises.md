@@ -118,3 +118,19 @@ Added changes to both (both located in part1 folder)
     
 USER app
 ```
+
+### 3.5
+
+Image sizes are as in 3.1 (after 3.1 changes). To maintain some consistency between the exercises I made new dockerfiles for this exercise for both example projects titled `Dockerfile.smol`. Since the projects are build straight from the dockerfiles the apps don't obviously have any of the functionality defined in part 2, so when running them both only exercises 1.10 and 1.12 work.
+
+[Backend dockerfile](..\part1\Dockerfiles\backend-example-docker-master\Dockerfile.smol)
+
+[Frontend dockerfile](..\part1\Dockerfiles\frontend-example-docker-master\Dockerfile.smol)
+
+![Smol backend](./five/backsmol.PNG)
+
+![Backend diff](./five/backdiff.PNG)
+
+![Smol front](./five/frontsmol.PNG)
+
+![Front diff](./five/frontdiff.PNG)
