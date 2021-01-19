@@ -94,3 +94,11 @@ CMD [ "sh", "-c", "npm start" ]
 Frontend image history after changes:
 
 ![Front](./one/frontafter.PNG)
+
+### 3.2
+
+Github https://github.com/peterikaisa/sample-project
+
+Docker Hub https://hub.docker.com/r/peterikaisa/sample-project
+
+Heroku https://sample-project-k.herokuapp.com/
