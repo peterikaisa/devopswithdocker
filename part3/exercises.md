@@ -102,3 +102,19 @@ Github https://github.com/peterikaisa/sample-project
 Docker Hub https://hub.docker.com/r/peterikaisa/sample-project
 
 Heroku https://sample-project-k.herokuapp.com/
+
+### 3.4
+
+[Backend dockerfile](..\part1\Dockerfiles\backend-example-docker-master\Dockerfile)
+
+[Frontend dockerfile](..\part1\Dockerfiles\frontend-example-docker-master\Dockerfile)
+
+Added changes to both (both located in part1 folder)
+
+```Dockerfile
+    && \
+    useradd -m app && \
+    chown -R app .
+    
+USER app
+```
