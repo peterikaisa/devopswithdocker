@@ -188,4 +188,4 @@ CMD [ "rails", "s" ]
 
 ### 3.8
 
-![Diagram](./eight/kubernetes.PNG)
+![Diagram](./eight/kubernetes.png)
